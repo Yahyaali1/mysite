@@ -5,6 +5,8 @@ class Question(models.Model):
     question_text = models.CharField(max_length=200)
     pub_date = models.DateTimeField('date published')
 
+    def dummy_function_return_invert(self,parm : bool):
+    	return not parm
 
 class Choice(models.Model):
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
