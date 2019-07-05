@@ -9,4 +9,8 @@ class QuestionModelTest(TestCase):
 	"""
 	def test_dummy_function_bool_invert(self):
 		q = Question()
-		self.assertIs(q.dummy_function_return_invert(1),True)
+		self.assertIs(q.dummy_function_return_invert(1),False)
+
+	def test_dummy_function_string_invert(self):
+		q=Question()
+		self.assertIs(q.dummy_function_return_invert(parm='hello'),False)

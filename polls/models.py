@@ -6,7 +6,10 @@ class Question(models.Model):
     pub_date = models.DateTimeField('date published')
 
     def dummy_function_return_invert(self,parm : bool):
-    	return not parm
+    	if(not isinstance(parm,bool)):
+    		return False
+    	else:
+    		return not parm
 
 class Choice(models.Model):
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
